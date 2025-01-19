@@ -21,7 +21,16 @@
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-    
+        std::string getname();
+        int getHitpoint();
+        int getEnergyPoint();
+        int getAttackDamage();
+        std::string get_name();
+        void setHitpoint(int value);
+        void setEnergyPoint(int value);
+        void setAttackDamage(int value);
+        void setname(std::string name);
+
     };
     
     
