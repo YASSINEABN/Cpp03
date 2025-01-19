@@ -1,7 +1,7 @@
 #include "ClapTrap.hpp"
 
 
-ClapTrap::ClapTrap():_name("default"),_HitPoint(10),_EnergyPoint(10),_AttackDamage(0)
+ClapTrap::ClapTrap():_name("default"),_HitPoint(100),_EnergyPoint(50),_AttackDamage(20)
 {
     std::cout << "Default Constructer for ClapTrap  is called" << std::endl;
 }
@@ -15,7 +15,7 @@ _EnergyPoint(obj._EnergyPoint),
     std::cout << "Constructer copy is called" << std::endl;
 }
 
- ClapTrap &ClapTrap::operator=( ClapTrap &obj)
+ ClapTrap &ClapTrap::operator=( const ClapTrap &obj)
  {
         if(this != &obj)
         {
@@ -28,7 +28,7 @@ _EnergyPoint(obj._EnergyPoint),
  }
 
 
-ClapTrap::ClapTrap(std::string name):_HitPoint(10),_EnergyPoint(10),_AttackDamage(0)
+ClapTrap::ClapTrap(std::string name):_HitPoint(100),_EnergyPoint(50),_AttackDamage(20)
 {
     this->_name = name;
     std::cout << "Constructer is called" << std::endl;

@@ -8,40 +8,31 @@ FragTrap::~FragTrap()
 FragTrap::FragTrap()
 {
     std::cout << "default constructor for FragTrap is called" << std::endl;
-    this->_AttackDamage= 30;
-    this->_EnergyPoint = 100;
-    this->_HitPoint = 100;
+   
 }
+ FragTrap::FragTrap(std::string name):ClapTrap(name)
+ {
+    std::cout << "constructor parametrised is called " << std::endl;
+ }
     void FragTrap::highFivesGuys(void)
     {
-            std::cout << "special message for FragTrap class" << std::endl;
+            if (this->_HitPoint <= 0)
+		std::cout << "Cannot high five because: ClapTrap " << this->_name << " is dead." << std::endl;
+	    else
+		std::cout << "FragTrap from ClapTrap " << this->_name << " says: \"HIGH FIVE EVERYONE! :)\"." << std::endl;
     }
-    FragTrap::FragTrap(const FragTrap &obj):ClapTrap()
+    FragTrap::FragTrap(const FragTrap &obj):ClapTrap(obj)
     {
-        this->_AttackDamage= obj._AttackDamage;
-        this->_EnergyPoint = obj._EnergyPoint;
-        this->_HitPoint = obj._HitPoint;
-        this->_name = obj._name;
+            std::cout << "copy constructor for FragTrap is called" << std::endl;
+
     }
     FragTrap &FragTrap::operator=(FragTrap &obj)
         {
-                if(this != &obj)
-                {
-                    this->_AttackDamage = obj._AttackDamage;
-                    this->_EnergyPoint = obj._EnergyPoint;
-                    this->_HitPoint = obj._HitPoint;
-                }
+                std::cout << "assinement operator = for FragTrap is called" << std::endl;
+                	ClapTrap::operator=(obj);
                 return *this;
         }   
 
-
-void FragTrap::attack(const std::string &target)
-{
-    if(this->_HitPoint <= 0 || this->_EnergyPoint <= 0)
-        return ;
-   this->_EnergyPoint++;
-   std::cout <<  "FragTrap" << this->_name << " attacks " << target  << "causing" << this->_AttackDamage <<  "points of damage! " ;
-}
 
 
 
