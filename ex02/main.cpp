@@ -1,8 +1,22 @@
+
 #include "FragTrap.hpp"
 
-int main()
+
+
+int	main(void)
 {
-    {
-        FragTrap obj;
-    }
+	FragTrap alice("Alice");
+
+	alice.attack("Bob");
+	alice.attack("Chris");
+	alice.attack("Diana");
+	alice.attack("Elisa");
+	alice.attack("Fred");
+	alice.attack("Gemma");
+	alice.attack("Henry");
+	alice.attack("Isabella");
+	alice.attack("Jack");
+	alice.attack("Kevin");
+	alice.attack("Laura");
+	alice.attack("Mike");
 }

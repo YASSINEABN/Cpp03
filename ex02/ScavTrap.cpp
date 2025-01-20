@@ -5,7 +5,7 @@ ScavTrap::ScavTrap()
     std::cout << "default constructor for Scavtrap is called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string const &name): ClapTrap(name)
+ScavTrap::ScavTrap(std::string  name): ClapTrap(name)
 {
 	std::cout << "ScavTrap from ClapTrap " << this->_name << " created." << std::endl;
 }
@@ -26,13 +26,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &obj)
 ScavTrap::~ScavTrap()
 {
     std::cout << "destructor for ScavTrap is called " << std::endl;
-}
-void ScavTrap::attack(const std::string &target)
-{
-    if(this->_HitPoint <= 0 || this->_EnergyPoint <= 0)
-        return ;
-   this->_EnergyPoint++;
-   std::cout <<  "ScavTrap" << this->_name << "   attacks   " << target  << " causing " << this->_AttackDamage <<  "points of damage! " << std::endl;
 }
 
 void	ScavTrap::guardGate(void)

@@ -1,11 +1,22 @@
-#include <iostream>
 #include "ScavTrap.hpp"
 
 
-int main()
+
+int	main(void)
 {
-    {
-        ScavTrap obj1;
-        obj1.attack("ahmed");
-    }
+	 ScavTrap alice("Alice");
+
+	alice.attack("Bob");
+	alice.attack("Chris");
+	alice.attack("Diana");
+	alice.attack("Elisa");
+	alice.attack("Fred");
+	alice.attack("Gemma");
+	alice.attack("Henry");
+	alice.attack("Isabella");
+	alice.attack("Jack");
+	alice.attack("Kevin");
+	alice.attack("Laura");
+	alice.attack("Mike");
+
 }

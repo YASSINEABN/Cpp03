@@ -1,7 +1,8 @@
 #include "ClapTrap.hpp"
 
 
-    void	alice_rundown(void)
+
+int	main(void)
 {
 	ClapTrap alice("Alice");
 
@@ -17,25 +18,6 @@
 	alice.attack("Kevin");
 	alice.attack("Laura");
 	alice.attack("Mike");
-}
-
-void	bob_rundown(void)
-{
-	ClapTrap	bob("Bob");
-
-	while (bob.getHitpoint())
-	{
-		bob.takeDamage(2);
-		bob.beRepaired(2);
-	}
-	bob.takeDamage(1);
-}
-
-int	main(void)
-{
-	std::cout << std::endl << std::endl << "Performing Alice's rundown..." << std::endl << std::endl;
-	alice_rundown();
-    bob_rundown();
 
 }
 
