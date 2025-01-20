@@ -10,7 +10,7 @@ FragTrap::FragTrap()
     std::cout << "default constructor for FragTrap is called" << std::endl;
    
 }
- FragTrap::FragTrap(std::string name):ClapTrap(name)
+ FragTrap::FragTrap(const std::string &name):ClapTrap(name)
  {
     std::cout << "constructor parametrised is called " << std::endl;
  }

@@ -10,7 +10,7 @@ private:
 public:
 
     ScavTrap();
-    ScavTrap(std::string const &name): ClapTrap(name){};
+    ScavTrap(std::string const &name);
     ScavTrap(ScavTrap const &copy);
     ScavTrap &operator=(const ScavTrap &obj);
     void attack(const std::string &target);
