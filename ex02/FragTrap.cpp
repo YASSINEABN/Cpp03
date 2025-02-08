@@ -29,7 +29,7 @@ FragTrap::FragTrap()
     FragTrap &FragTrap::operator=(FragTrap &obj)
         {
                 std::cout << "assinement operator = for FragTrap is called" << std::endl;
-                	ClapTrap::operator=(obj);
+                ClapTrap::operator=(obj);
                 return *this;
         }   
 

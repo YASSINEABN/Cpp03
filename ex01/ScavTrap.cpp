@@ -16,7 +16,7 @@ ScavTrap::ScavTrap(ScavTrap const &copy): ClapTrap(copy)
 	std::cout << "ScavTrap from ClapTrap " << this->_name << " copied." << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &obj)
+ ScavTrap &ScavTrap::operator=(const ScavTrap &obj)
 {
     std::cout << "Assignment operator for ScavTrap called." << std::endl;
 	ClapTrap::operator=(obj);
@@ -35,6 +35,8 @@ void	ScavTrap::guardGate(void)
 	else
 		std::cout << "ScavTrap from ClapTrap " << this->_name << " switched to mode: \"Guard Gate\"." << std::endl;
 }
-
-
+void ScavTrap::attack(const std::string &target)
+{
+	std::cout << "hello m scavtrap" << target;
+}
 

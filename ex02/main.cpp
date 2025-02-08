@@ -5,18 +5,11 @@
 
 int	main(void)
 {
-	FragTrap alice("Alice");
+	
+	ClapTrap *alice = new FragTrap("Alice");
 
-	alice.attack("Bob");
-	alice.attack("Chris");
-	alice.attack("Diana");
-	alice.attack("Elisa");
-	alice.attack("Fred");
-	alice.attack("Gemma");
-	alice.attack("Henry");
-	alice.attack("Isabella");
-	alice.attack("Jack");
-	alice.attack("Kevin");
-	alice.attack("Laura");
-	alice.attack("Mike");
+	alice->attack("Bob");
+	alice->attack("Bob1");
+	
+	delete(alice);
 }

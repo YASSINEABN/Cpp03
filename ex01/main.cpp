@@ -4,19 +4,8 @@
 
 int	main(void)
 {
-	 ScavTrap alice("Alice");
-
-	alice.attack("Bob");
-	alice.attack("Chris");
-	alice.attack("Diana");
-	alice.attack("Elisa");
-	alice.attack("Fred");
-	alice.attack("Gemma");
-	alice.attack("Henry");
-	alice.attack("Isabella");
-	alice.attack("Jack");
-	alice.attack("Kevin");
-	alice.attack("Laura");
-	alice.attack("Mike");
+	ClapTrap *ptr = new ScavTrap("ennemie");
+	ptr->attack("yassine");
+	delete(ptr);
 
 }

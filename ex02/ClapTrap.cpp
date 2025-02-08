@@ -31,7 +31,7 @@ _EnergyPoint(obj._EnergyPoint),
 ClapTrap::ClapTrap(std::string name):_HitPoint(100),_EnergyPoint(100),_AttackDamage(30)
 {
     this->_name = name;
-    std::cout << "Constructer is called" << std::endl;
+    std::cout << "Constructer of claptrap is called" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -49,6 +49,7 @@ void ClapTrap::attack(const std::string &target)
    this->_EnergyPoint--;
    std::cout <<  "ClapTrap " << this->_name << " attacks " << target  << ", causing " << this->_AttackDamage <<  " points of damage! " << std::endl ;
 }
+
 void ClapTrap::takeDamage(unsigned int amount)
 {
    if(this->_HitPoint <= 0 )
@@ -61,6 +62,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     if(this->_HitPoint < 0)
         this->_HitPoint= 0;
 }
+
 void ClapTrap::beRepaired(unsigned int amount)
 {
    if(this->_HitPoint <= 0 || this->_EnergyPoint <= 0)
